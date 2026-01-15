@@ -19,7 +19,7 @@ import {
 
 const portfolioData = {
   name: "Nathanim Philipos",
-  title: "GRC Analyst",
+  title: "GRC Professional",
   location: "St. Louis, MO",
   email: "nathan.philipos12@gmail.com",
   linkedin: "https://www.linkedin.com/in/nathanim-philipos-9688a2274/",
