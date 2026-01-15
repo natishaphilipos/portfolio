@@ -26,7 +26,7 @@ const portfolioData = {
   github: "https://github.com/nathanimphilipos",
   website: "https://tenagrc.com",
   summary: [
-    "I am an MBA Candidate at Missouri State University and a GRC Analyst at SaltyCloud, working at the intersection of security, technology, and communication. I specialize in translating complex security and compliance requirements into clear, actionable guidance that engineering teams, leadership, and non-technical stakeholders can actually use. My work spans SOC 2 operations, FedRAMP Moderate alignment, vendor risk management, and AWS-native control implementation.",
+    "I am an MBA Candidate at Missouri State University and a GRC Professional at SaltyCloud, working at the intersection of security, technology, and communication. I specialize in translating complex security and compliance requirements into clear, actionable guidance that engineering teams, leadership, and non-technical stakeholders can actually use. My work spans SOC 2 operations, FedRAMP Moderate alignment, vendor risk management, and AWS-native control implementation.",
     "My approach to GRC is both technical and human-centered. I focus on designing compliance programs that reflect how systems truly operate — not how frameworks are written on paper. By combining cloud context, automation, and structured workflows, I aim to make risk visible without adding unnecessary friction. I believe strong governance enables velocity when it is embedded into engineering processes rather than imposed as an external checkpoint.",
     "Outside of my day-to-day role, I build tools and content that push modern GRC forward. I created TenaGRC, a lightweight risk analysis platform designed to give startups rapid insight into their security posture without the overhead of traditional GRC tooling. At heart, I am relationship-first: the best security outcomes come from empathy, clarity, and collaboration. Originally from Addis Ababa, Ethiopia, I thrive in fast-changing, diverse environments and remain committed to continuous learning, technical growth, and advancing a GRC community that is modern, practical, and people-focused."
   ],
@@ -214,7 +214,7 @@ function Hero() {
             transition={{ delay: 0.2 }}
             className="text-sm md:text-base font-mono text-gray-500 mb-4 tracking-wider"
           >
-            GRC ANALYST
+            GRC PROFESSIONAL
           </motion.p>
           
           <motion.h1 
