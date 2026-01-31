@@ -382,7 +382,7 @@ function About() {
           <div className="mt-16 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="shrink-0">
-                <a href="https://isoragrc.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://saltycloud.com" target="_blank" rel="noopener noreferrer">
                   <img 
                     src="/isora-logo.png" 
                     alt="IsoraGRC from SaltyCloud"
@@ -396,7 +396,7 @@ function About() {
                   {portfolioData.isoraDescription}
                 </p>
                 <a 
-                  href="https://isoragrc.com" 
+                  href="https://saltycloud.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-black hover:underline"
