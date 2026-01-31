@@ -26,10 +26,12 @@ const portfolioData = {
   github: "https://github.com/nathanimphilipos",
   website: "https://tenagrc.com",
   summary: [
-    "I am an MBA Candidate at Missouri State University and a GRC Professional at SaltyCloud, working at the intersection of security, technology, and communication. I specialize in translating complex security and compliance requirements into clear, actionable guidance that engineering teams, leadership, and non-technical stakeholders can actually use. My work spans SOC 2 operations, FedRAMP Moderate alignment, vendor risk management, and AWS-native control implementation.",
-    "My approach to GRC is both technical and human-centered. I focus on designing compliance programs that reflect how systems truly operate — not how frameworks are written on paper. By combining cloud context, automation, and structured workflows, I aim to make risk visible without adding unnecessary friction. I believe strong governance enables velocity when it is embedded into engineering processes rather than imposed as an external checkpoint.",
-    "Outside of my day-to-day role, I build tools and content that push modern GRC forward. I created TenaGRC, a lightweight risk analysis platform designed to give startups rapid insight into their security posture without the overhead of traditional GRC tooling. At heart, I am relationship-first: the best security outcomes come from empathy, clarity, and collaboration. Originally from Addis Ababa, Ethiopia, I thrive in fast-changing, diverse environments and remain committed to continuous learning, technical growth, and advancing a GRC community that is modern, practical, and people-focused."
+    "I am an MBA Candidate at Missouri State University and a GRC Professional at SaltyCloud, working at the intersection of security, technology, and communication. My focus is translating complex security and regulatory requirements into clear, actionable guidance that engineering teams, leadership, and non-technical stakeholders can actually use.",
+    "At SaltyCloud, I support the security and compliance efforts for the IsoraGRC platform, with a primary focus on SOC 2 operations and GovRAMP Moderate alignment. While I do much of the hands-on GRC work, my impact is made possible through close collaboration with engineering, development, and executive leadership. Together, we design controls, manage risk, and implement AWS-native security practices that reflect how our systems truly operate — not just how frameworks describe them.",
+    "My approach to GRC is both technical and human-centered. I believe strong governance should enable velocity, not slow it down. By embedding compliance into engineering workflows and leveraging automation and cloud context, I focus on making risk visible without unnecessary friction. GRC, to me, is a team sport — the best outcomes come from shared ownership, trust, and open communication.",
+    "Outside of my role, I build tools and content that push modern GRC forward. I created TenaGRC, a lightweight risk analysis platform designed to help startups quickly understand their security posture without the overhead of traditional GRC tooling. Originally from Addis Ababa, Ethiopia, I thrive in fast-changing environments and remain committed to continuous learning, technical growth, and building a GRC community that is practical, collaborative, and people-focused."
   ],
+  isoraDescription: "IsoraGRC is redefining how organizations approach information security and risk management. Built for modern teams, the platform streamlines risk assessments, simplifies compliance operations, and provides clear visibility into vendor and asset risk — all without the complexity of legacy GRC tools. With an intuitive, workflow-driven design, teams can easily conduct assessments, manage risks, and oversee their entire inventory of vendors and assets in one centralized platform.",
   professionalSkills: [
     { name: "Program Ownership & Accountability", desc: "Lead GovRAMP Moderate and SOC 2 initiatives end-to-end" },
     { name: "Autonomous & Self-Directed", desc: "Thrive in fast-moving startup environments" },
@@ -305,8 +307,28 @@ function About() {
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2 space-y-6">
-            {portfolioData.summary.map((paragraph, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
+            <AnimatedSection delay={0.1}>
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="w-48 h-48 md:w-56 md:h-56 shrink-0 mx-auto md:mx-0">
+                  <img 
+                    src="/profile.JPG" 
+                    alt="Nathanim Philipos"
+                    className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    {portfolioData.summary[0]}
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    {portfolioData.summary[1]}
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            {portfolioData.summary.slice(2).map((paragraph, index) => (
+              <AnimatedSection key={index + 2} delay={(index + 2) * 0.1}>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   {paragraph}
                 </p>
@@ -354,6 +376,38 @@ function About() {
             </div>
           </AnimatedSection>
         </div>
+        
+        {/* IsoraGRC Section */}
+        <AnimatedSection delay={0.4}>
+          <div className="mt-16 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="shrink-0">
+                <a href="https://isoragrc.com" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src="/isora-logo.png" 
+                    alt="IsoraGRC from SaltyCloud"
+                    className="h-16 md:h-20 w-auto hover:opacity-80 transition-opacity"
+                  />
+                </a>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl font-semibold mb-3">Where I Work</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {portfolioData.isoraDescription}
+                </p>
+                <a 
+                  href="https://isoragrc.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 text-sm font-medium text-black hover:underline"
+                >
+                  Learn more about IsoraGRC
+                  <ExternalLink size={14} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   )
