@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import confetti from 'canvas-confetti'
 import { 
   Github, 
   Linkedin, 
@@ -186,6 +187,14 @@ const timelineData = [
     ]
   },
   {
+    year: "2025-grad",
+    title: "Graduation",
+    content: "In December 2025, I graduated with honors with my Bachelor of Science in Information Technology & Cybersecurity, a moment made unforgettable by having my father there to witness his sacrifice come full circle. Walking across that stage represented years of discipline, resilience, and faith, and it remains one of the most meaningful milestones of my life. Graduating a semester early to begin working was incredibly challenging but well worth it.",
+    subHeader: "But the job isn't finished...",
+    subContent: "In May 2027, I will graduate with my MBA with a concentration in Cybersecurity Policy, continuing the journey of bridging technical execution with thoughtful governance and leadership.",
+    isGraduation: true
+  },
+  {
     year: 2026,
     title: "Building Forward",
     content: "Running GovRAMP Moderate as a solo GRC analyst at a bootstrapped startup. Graduated from the Progressing Snapshot program. Now shooting for GovRAMP Moderate authorization."
@@ -193,13 +202,52 @@ const timelineData = [
 ]
 
 function PathTimeline() {
-  const years = [2018, 2022, 2023, 2024, 2025, 2026]
+  const years = [2018, 2022, 2023, 2024, 2025, "2025-grad", 2026]
+  const yearLabels = [2018, 2022, 2023, 2024, 2025, "Graduation", 2026]
   const [selectedYearIndex, setSelectedYearIndex] = useState(0)
   const sliderRef = useRef(null)
   const [isDragging, setIsDragging] = useState(false)
+  const [hasTriggeredConfetti, setHasTriggeredConfetti] = useState(false)
+
+  const triggerConfetti = useCallback(() => {
+    const duration = 3000
+    const end = Date.now() + duration
+
+    const frame = () => {
+      confetti({
+        particleCount: 3,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.6 },
+        colors: ['#FFD700', '#FFA500', '#FF6347', '#4169E1', '#32CD32']
+      })
+      confetti({
+        particleCount: 3,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.6 },
+        colors: ['#FFD700', '#FFA500', '#FF6347', '#4169E1', '#32CD32']
+      })
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame)
+      }
+    }
+    frame()
+  }, [])
 
   const handleSliderChange = (e) => {
-    setSelectedYearIndex(parseInt(e.target.value))
+    const newIndex = parseInt(e.target.value)
+    setSelectedYearIndex(newIndex)
+    
+    if (years[newIndex] === "2025-grad" && !hasTriggeredConfetti) {
+      triggerConfetti()
+      setHasTriggeredConfetti(true)
+    }
+    
+    if (years[newIndex] !== "2025-grad") {
+      setHasTriggeredConfetti(false)
+    }
   }
 
   const currentYearData = timelineData.find(item => item.year === years[selectedYearIndex])
@@ -218,15 +266,24 @@ function PathTimeline() {
           <div className="bg-black rounded-2xl p-8 md:p-12">
             <div className="relative mb-8">
               <div className="flex justify-between mb-4">
-                {years.map((year, index) => (
+                {yearLabels.map((label, index) => (
                   <button
-                    key={year}
-                    onClick={() => setSelectedYearIndex(index)}
+                    key={index}
+                    onClick={() => {
+                      setSelectedYearIndex(index)
+                      if (years[index] === "2025-grad" && !hasTriggeredConfetti) {
+                        triggerConfetti()
+                        setHasTriggeredConfetti(true)
+                      }
+                      if (years[index] !== "2025-grad") {
+                        setHasTriggeredConfetti(false)
+                      }
+                    }}
                     className={`text-sm font-bold transition-all duration-300 ${
                       index <= selectedYearIndex ? 'text-white' : 'text-gray-600'
                     } ${index === selectedYearIndex ? 'text-lg scale-110' : ''}`}
                   >
-                    {year}
+                    {label}
                   </button>
                 ))}
               </div>
@@ -274,7 +331,8 @@ function PathTimeline() {
               className="text-white min-h-[300px]"
             >
               <h3 className="text-3xl md:text-4xl font-bold mb-2">
-                {years[selectedYearIndex]}
+                {years[selectedYearIndex] === "2025-grad" ? "2025" : years[selectedYearIndex]}
+                {currentYearData?.isGraduation && <span className="ml-3">🎓</span>}
               </h3>
               {currentYearData && (
                 <>
@@ -284,6 +342,13 @@ function PathTimeline() {
                   
                   {currentYearData.content && (
                     <p className="text-gray-300 text-lg leading-relaxed">{currentYearData.content}</p>
+                  )}
+                  
+                  {currentYearData.subHeader && (
+                    <div className="mt-8">
+                      <h4 className="text-xl md:text-2xl font-bold text-white mb-4">{currentYearData.subHeader}</h4>
+                      <p className="text-gray-300 text-lg leading-relaxed">{currentYearData.subContent}</p>
+                    </div>
                   )}
                   
                   {currentYearData.events && (
