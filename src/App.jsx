@@ -572,7 +572,7 @@ function Contact() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Let's Connect</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
             I'm always interested in discussing GRC, security, compliance automation, 
-            or just chatting for fun, Feel free to reach out!
+            or just chatting. Feel free to reach out!
           </p>
         </AnimatedSection>
         
