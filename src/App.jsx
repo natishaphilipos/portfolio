@@ -26,10 +26,8 @@ const portfolioData = {
   github: "https://github.com/nathanimphilipos",
   website: "https://tenagrc.com",
   summary: [
-    "I am an MBA Candidate at Missouri State University and a GRC Professional at SaltyCloud, working at the intersection of security, technology, and communication. My focus is translating complex security and regulatory requirements into clear, actionable guidance that engineering teams, leadership, and non-technical stakeholders can actually use.",
-    "At SaltyCloud, I support the security and compliance efforts for the IsoraGRC platform, with a primary focus on SOC 2 operations and GovRAMP Moderate alignment. While I do much of the hands-on GRC work, my impact is made possible through close collaboration with engineering, development, and executive leadership. Together, we design controls, manage risk, and implement AWS-native security practices that reflect how our systems truly operate — not just how frameworks describe them.",
-    "My approach to GRC is both technical and human-centered. I believe strong governance should enable velocity, not slow it down. By embedding compliance into engineering workflows and leveraging automation and cloud context, I focus on making risk visible without unnecessary friction. GRC, to me, is a team sport — the best outcomes come from shared ownership, trust, and open communication.",
-    "Outside of my role, I build tools and content that push modern GRC forward. I created TenaGRC, a lightweight risk analysis platform designed to help startups quickly understand their security posture without the overhead of traditional GRC tooling. Originally from Addis Ababa, Ethiopia, I thrive in fast-changing environments and remain committed to continuous learning, technical growth, and building a GRC community that is practical, collaborative, and people-focused."
+    "I'm Nathanim Philipos, a believer in Christ, an MBA candidate at Missouri State University, and a GRC professional at SaltyCloud, working at the intersection of cybersecurity, cloud technology, and communication. I focus on making GRC clear and practical by removing jargon and translating security requirements into guidance teams can actually use.",
+    "At SaltyCloud, I lead SOC 2 operations and GovRAMP Moderate efforts for the IsoraGRC platform, working closely with engineering, development, and executive leadership as a subject-matter expert. I enjoy automation, AWS-native security, and team-based problem solving, and as someone originally from Addis Ababa, Ethiopia, I thrive in fast-changing environments. Feel free to keep scrolling to learn more about me."
   ],
   isoraDescription: "IsoraGRC is redefining how organizations approach information security and risk management. Built for modern teams, the platform streamlines risk assessments, simplifies compliance operations, and provides clear visibility into vendor and asset risk — all without the complexity of legacy GRC tools. With an intuitive, workflow-driven design, teams can easily conduct assessments, manage risks, and oversee their entire inventory of vendors and assets in one centralized platform.",
   professionalSkills: [
@@ -91,6 +89,272 @@ const portfolioData = {
     { title: "Why Continuous Vulnerability Monitoring is Essential: Passing an Audit vs Staying Secure", platform: "LinkedIn", url: "https://www.linkedin.com/posts/nathanim-philipos-9688a2274_continious-vulnerability-monitoring-activity-7394071435058667522-zK5E?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMNHOABvbJFAK1jwvVUsTpkNl4fNvLCTCc" }
   ],
   articlesIntro: "I write GRC articles to help build a supportive community where we can learn from each other's mistakes and experiences. My goal is to make GRC easier to understand, lower the barrier to entry, and help people feel confident that they belong and are growing in this field."
+}
+
+const timelineData = [
+  {
+    year: 2018,
+    title: "A New Beginning",
+    content: "Moved from Ethiopia to the United States at age 14 to attend boarding school. My parents sacrificed everything to give me this opportunity for a better education."
+  },
+  {
+    year: 2022,
+    title: "College Begins",
+    content: "Graduated high school and started my freshman year at Missouri State University, studying Information Technology & Cybersecurity."
+  },
+  {
+    year: 2023,
+    title: "First Steps into GRC",
+    events: [
+      {
+        period: "May 2023 - Jan 2024",
+        role: "Internal Audit Intern",
+        company: "Office of Internal Audit",
+        highlight: "Built a risk visualization heatmap that categorized risks from low to critical, saving auditors hours of planning time.",
+        skills: ["Risk Assessments", "Audit Practices", "Automation"]
+      },
+      {
+        period: "Fall 2023",
+        note: "Applied to 50+ internships. Landed two roles."
+      }
+    ]
+  },
+  {
+    year: 2024,
+    title: "Growth Through Experience",
+    events: [
+      {
+        period: "Jan - May 2024",
+        role: "Technology Support Specialist",
+        company: "The Whitlock Company",
+        highlight: "Deepened my understanding of system architecture and support. Automation became my passion.",
+        skills: ["System Architecture", "Technical Support", "Automation"]
+      },
+      {
+        period: "May - June 2024",
+        note: "Mission trip to Italy. This trip reignited my desire to grow in my field after proper rest."
+      },
+      {
+        period: "June - Oct 2024",
+        role: "IT Audit Intern",
+        company: "Armanino LLP",
+        highlight: "Grew in SOC 2 control testing and risk identification. Became very familiar with what testing looks like from an auditor's perspective.",
+        skills: ["SOC 2", "Control Testing", "Risk Identification"]
+      },
+      {
+        period: "Oct 2024 - Jan 2025",
+        role: "IT SOC Audit Associate",
+        company: "Copeland Buhl",
+        highlight: "First associate role as a junior in college. Small team managing 18 audits at a time. Grew in SOC 2 & HITRUST testing.",
+        skills: ["SOC 2", "HITRUST", "Audit Management"]
+      }
+    ]
+  },
+  {
+    year: 2025,
+    title: "Burnout, Recovery & Breakthrough",
+    events: [
+      {
+        period: "January 2025",
+        note: "First trip back to Ethiopia in 4 years. Reunited with family for a month. Much needed rest and rejuvenation."
+      },
+      {
+        period: "March 2025",
+        note: "Still at Copeland Buhl. Faced severe burnout and mental health challenges while balancing 17 audit engagements."
+      },
+      {
+        period: "April 2025",
+        note: "Experienced my first layoff. Decided to step away from tech to recover."
+      },
+      {
+        period: "Spring 2025",
+        role: "Barista",
+        company: "Local Coffee Shop",
+        highlight: "This role helped me recover, regain my love for working with people, and reflect on managing burnout. My passion for cybersecurity reignited."
+      },
+      {
+        period: "July 2025",
+        role: "GRC Professional",
+        company: "SaltyCloud",
+        highlight: "Built TenaGRC and presented it to SaltyCloud's CEO. Hired to run their first SOC 2 engagement. Finally transitioned from IT Audit to internal GRC.",
+        skills: ["SOC 2 Type II", "GRC Program Management"]
+      },
+      {
+        period: "September 2025",
+        note: "SaltyCloud received their first SOC 2 Type II attestation under my leadership."
+      }
+    ]
+  },
+  {
+    year: 2026,
+    title: "Building Forward",
+    content: "Running GovRAMP Moderate as a solo GRC analyst at a bootstrapped startup. Graduated from the Progressing Snapshot program. Now shooting for GovRAMP Moderate authorization."
+  }
+]
+
+function PathTimeline() {
+  const years = [2018, 2022, 2023, 2024, 2025, 2026]
+  const [selectedYearIndex, setSelectedYearIndex] = useState(0)
+  const sliderRef = useRef(null)
+  const [isDragging, setIsDragging] = useState(false)
+
+  const handleSliderChange = (e) => {
+    setSelectedYearIndex(parseInt(e.target.value))
+  }
+
+  const currentYearData = timelineData.find(item => item.year === years[selectedYearIndex])
+
+  return (
+    <section className="bg-gray-50 pb-20">
+      <div className="max-w-6xl mx-auto px-6 pt-4">
+        <AnimatedSection>
+          <h2 className="section-title">My Path Into GRC</h2>
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            Drag the slider to explore my journey
+          </p>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.1}>
+          <div className="bg-black rounded-2xl p-8 md:p-12">
+            <div className="relative mb-8">
+              <div className="flex justify-between mb-4">
+                {years.map((year, index) => (
+                  <button
+                    key={year}
+                    onClick={() => setSelectedYearIndex(index)}
+                    className={`text-sm font-bold transition-all duration-300 ${
+                      index <= selectedYearIndex ? 'text-white' : 'text-gray-600'
+                    } ${index === selectedYearIndex ? 'text-lg scale-110' : ''}`}
+                  >
+                    {year}
+                  </button>
+                ))}
+              </div>
+              
+              <div className="relative h-2 bg-gray-700 rounded-full">
+                <motion.div 
+                  className="absolute h-full bg-white rounded-full"
+                  initial={{ width: '0%' }}
+                  animate={{ width: `${(selectedYearIndex / (years.length - 1)) * 100}%` }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+              
+              <input
+                ref={sliderRef}
+                type="range"
+                min="0"
+                max={years.length - 1}
+                value={selectedYearIndex}
+                onChange={handleSliderChange}
+                onMouseDown={() => setIsDragging(true)}
+                onMouseUp={() => setIsDragging(false)}
+                onTouchStart={() => setIsDragging(true)}
+                onTouchEnd={() => setIsDragging(false)}
+                className="absolute top-0 w-full h-8 opacity-0 cursor-pointer"
+                style={{ marginTop: '12px' }}
+              />
+              
+              <motion.div
+                className="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full shadow-lg border-4 border-black cursor-grab active:cursor-grabbing"
+                style={{ 
+                  left: `calc(${(selectedYearIndex / (years.length - 1)) * 100}% - 12px)`,
+                  marginTop: '4px'
+                }}
+                animate={{ scale: isDragging ? 1.2 : 1 }}
+                transition={{ duration: 0.2 }}
+              />
+            </div>
+
+            <motion.div
+              key={selectedYearIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="text-white min-h-[300px]"
+            >
+              <h3 className="text-3xl md:text-4xl font-bold mb-2">
+                {years[selectedYearIndex]}
+              </h3>
+              {currentYearData && (
+                <>
+                  <p className="text-xl md:text-2xl font-semibold text-gray-300 mb-6">
+                    {currentYearData.title}
+                  </p>
+                  
+                  {currentYearData.content && (
+                    <p className="text-gray-300 text-lg leading-relaxed">{currentYearData.content}</p>
+                  )}
+                  
+                  {currentYearData.events && (
+                    <div className="space-y-6 mt-4">
+                      {currentYearData.events.map((event, eventIndex) => (
+                        <motion.div 
+                          key={eventIndex} 
+                          className="border-l-2 border-gray-600 pl-4"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: eventIndex * 0.1 }}
+                        >
+                          <p className="text-sm font-semibold text-gray-400 mb-1">{event.period}</p>
+                          
+                          {event.role && (
+                            <p className="font-bold text-lg text-white">
+                              {event.role} <span className="font-normal text-gray-400">@ {event.company}</span>
+                            </p>
+                          )}
+                          
+                          {event.highlight && (
+                            <p className="text-gray-300 mt-1 leading-relaxed">{event.highlight}</p>
+                          )}
+                          
+                          {event.note && !event.role && (
+                            <p className="text-gray-300 italic">{event.note}</p>
+                          )}
+                          
+                          {event.skills && (
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              {event.skills.map((skill, skillIndex) => (
+                                <span 
+                                  key={skillIndex}
+                                  className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-xs font-medium"
+                                >
+                                  {skill}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </motion.div>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+              
+              {selectedYearIndex === years.length - 1 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="mt-10 pt-8 border-t border-gray-700"
+                >
+                  <p className="text-lg md:text-xl leading-relaxed font-medium text-gray-300">
+                    My story is unique, just like yours — shaped by <span className="text-white">sacrifice</span>, <span className="text-white">burnout</span>, <span className="text-white">uncertainty</span>, incredible highs, and some very real lows.
+                  </p>
+                  <p className="text-xl md:text-2xl font-bold mt-6 text-white">
+                    Don't minimize your path; leverage it.
+                  </p>
+                  <p className="text-gray-400 mt-4 text-lg">
+                    Because your story is exactly what makes you <em>you</em>, and it's powerful enough to carry you forward.
+                  </p>
+                </motion.div>
+              )}
+            </motion.div>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  )
 }
 
 function AnimatedSection({ children, className = "", delay = 0 }) {
@@ -303,7 +567,7 @@ function Hero() {
 function About() {
   return (
     <section id="about" className="bg-gray-50">
-      <div className="section-container">
+      <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 pb-8">
         <AnimatedSection>
           <h2 className="section-title">About Me</h2>
         </AnimatedSection>
@@ -384,7 +648,7 @@ function About() {
         
         {/* IsoraGRC Section */}
         <AnimatedSection delay={0.4}>
-          <div className="mt-16 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div className="mt-4 bg-white rounded-xl p-5 shadow-sm border border-gray-100">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="shrink-0">
                 <a href="https://saltycloud.com" target="_blank" rel="noopener noreferrer">
@@ -475,6 +739,47 @@ function Skills() {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+        
+        <div className="mt-16">
+          <AnimatedSection delay={0.4}>
+            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+              <Award size={24} />
+              Certifications
+            </h3>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={0.5}>
+            <div className="flex flex-wrap gap-8 items-start">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center w-48">
+                <img 
+                  src="/iso-42001-badge.jpeg" 
+                  alt="ISO/IEC 42001:2023 Lead Auditor Certification"
+                  className="w-32 h-32 object-contain mb-4"
+                />
+                <h4 className="font-bold text-lg">ISO/IEC 42001:2023</h4>
+                <p className="text-gray-600 text-sm mt-1">Lead Auditor Certified</p>
+              </div>
+              <div className="flex-1 max-w-lg">
+                <h4 className="font-semibold text-lg mb-3">What AI Governance Accomplishes</h4>
+                <p className="text-gray-600 text-sm mb-4">ISO 42001 establishes a framework for responsible AI management, ensuring organizations deploy AI systems ethically and effectively.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-black font-bold">•</span>
+                    <span><strong>Risk Management</strong> — Identifies and mitigates AI-specific risks including bias, transparency, and accountability gaps</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-black font-bold">•</span>
+                    <span><strong>Ethical Alignment</strong> — Ensures AI systems align with organizational values, regulatory requirements, and societal expectations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-black font-bold">•</span>
+                    <span><strong>Continuous Improvement</strong> — Establishes monitoring and audit processes to maintain AI system integrity over time</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
@@ -645,6 +950,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <PathTimeline />
       <Skills />
       <Projects />
       <Contact />
