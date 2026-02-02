@@ -360,7 +360,7 @@ function About() {
               <hr className="my-6" />
               
               <h3 className="font-semibold text-lg mb-2">Featured Articles</h3>
-              <p className="text-xs text-gray-500 mb-4">{portfolioData.articlesIntro}</p>
+              <p className="text-sm font-medium text-gray-700 mb-4 leading-relaxed">{portfolioData.articlesIntro}</p>
               <div className="space-y-3">
                 {portfolioData.articles.map((article, index) => (
                   <a 
@@ -377,6 +377,7 @@ function About() {
                   </a>
                 ))}
               </div>
+              <p className="text-xs text-gray-400 mt-4 italic">I appreciate feedback on my writing.</p>
             </div>
           </AnimatedSection>
         </div>
