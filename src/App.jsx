@@ -85,9 +85,12 @@ const portfolioData = {
     }
   ],
   articles: [
-    { title: "Collaborating with Engineering (...Without Being That Person)", platform: "LinkedIn" },
-    { title: "Why Communication is becoming the most important skill in GRC", platform: "LinkedIn" }
-  ]
+    { title: "Collaborating with Engineering (...Without Being That Person)", platform: "LinkedIn", url: "https://www.linkedin.com/posts/nathanim-philipos-9688a2274_collaborating-grc-with-engineering-activity-7398782484504817664-FLaG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMNHOABvbJFAK1jwvVUsTpkNl4fNvLCTCc" },
+    { title: "Why Communication is Becoming the Most Underrated Skill in GRC", platform: "LinkedIn", url: "https://www.linkedin.com/posts/nathanim-philipos-9688a2274_communication-in-grc-activity-7401666515860905984-MBq4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMNHOABvbJFAK1jwvVUsTpkNl4fNvLCTCc" },
+    { title: "Risk Assessments Made Simple", platform: "LinkedIn", url: "https://www.linkedin.com/posts/nathanim-philipos-9688a2274_theres-something-funny-about-risk-assessments-activity-7396970558292361217-nkFv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMNHOABvbJFAK1jwvVUsTpkNl4fNvLCTCc" },
+    { title: "Why Continuous Vulnerability Monitoring is Essential: Passing an Audit vs Staying Secure", platform: "LinkedIn", url: "https://www.linkedin.com/posts/nathanim-philipos-9688a2274_continious-vulnerability-monitoring-activity-7394071435058667522-zK5E?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEMNHOABvbJFAK1jwvVUsTpkNl4fNvLCTCc" }
+  ],
+  articlesIntro: "I write GRC articles to help build a supportive community where we can learn from each other's mistakes and experiences. My goal is to make GRC easier to understand, lower the barrier to entry, and help people feel confident that they belong and are growing in this field."
 }
 
 function AnimatedSection({ children, className = "", delay = 0 }) {
@@ -356,12 +359,13 @@ function About() {
               
               <hr className="my-6" />
               
-              <h3 className="font-semibold text-lg mb-4">Featured Articles</h3>
+              <h3 className="font-semibold text-lg mb-2">Featured Articles</h3>
+              <p className="text-xs text-gray-500 mb-4">{portfolioData.articlesIntro}</p>
               <div className="space-y-3">
                 {portfolioData.articles.map((article, index) => (
                   <a 
                     key={index}
-                    href={portfolioData.linkedin}
+                    href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-sm text-gray-600 hover:text-black transition-colors group"
